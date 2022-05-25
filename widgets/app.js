@@ -7,55 +7,31 @@
  */
 function getCurrentPage(navigation) {
   switch (navigation) {
-    case "home":
-      return {
-        type: "widget",
-        name: "home",
-        query: {
-          "$find": {
-            "_datastore": {
-              "$eq": "vars"
-            }
-          }
-        }
-      };
     case "firstUi":
       return {
         type: "widget",
         name: "firstUi",
       };
-    case "userInterest":
+    case "resultsView":
       return {
         type: "widget",
-        name: "userInterest",
+        name: "resultsView",
         query: {
           "$find": {
             "_datastore": {
-              "$eq": "vars"
+              "$eq": "appData"
             }
           }
         }
       };
-    case "userViewed":
+    case "singleResultView":
       return {
         type: "widget",
-        name: "userViewed",
+        name: "singleResultView",
         query: {
           "$find": {
             "_datastore": {
-              "$eq": "vars"
-            }
-          }
-        }
-      };
-    case "movieInfo":
-      return {
-        type: "widget",
-        name: "movieInfo",
-        query: {
-          "$find": {
-            "_datastore": {
-              "$eq": "vars"
+              "$eq": "appData"
             }
           }
         }
@@ -75,14 +51,8 @@ function getCurrentPage(navigation) {
  * @returns 
  */
 module.exports = async (data, _props) => {
-  console.log("siuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");/*try {
-    nonExistentFunction();
-  } catch (error) {
-    console.error(error);
-    // expected output: ReferenceError: nonExistentFunction is not defined
-    // Note - error messages will vary depending on browser
-  }*/
-  var nav = (data.length == 0) ? "firstUi" : (data[0].navigation === undefined) ? data[0].data.navigation : data[0].navigation;
+  console.log(data);
+  var nav = (data.length == 0) ? "firstUi" : (data[0].navigation === undefined) ? data[0].typeOfTransports.navigation : data[0].navigation;
   var page = getCurrentPage(nav);
   return page;
 }

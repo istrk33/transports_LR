@@ -19,6 +19,7 @@ module.exports = async () => {
       //  init
       onEnvStart: require('./listeners/init/onEnvStart'),
       onUserFirstJoin: require('./listeners/init/onUserFirstJoin'),
+      onSessionStart: require('./listeners/init/onSessionStart'),
       // clicks
       searchClick: require('./listeners/clicks/searchClick'),
       radioClick: require('./listeners/clicks/radioButtonClick'),

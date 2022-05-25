@@ -11,6 +11,10 @@
 avec source destination des 2 textfield
 3. recuperer les coordonnées gps, temps, distance et consommation en fuel ?
 4. requete sur api la rochelle pour avoir parking, station vélo ou station bus la plus proche
+
+- setup les radio button avant de faire la requete vers l'api de geolocalisation
+- requete vers les données de la ville
+
 > voiture : regarder uniquement pour la destination
 > velo : regarder station pour le début et la destination
 > bus : regarder arrêt de bus pour le début et la destination
@@ -23,8 +27,3 @@ avec source destination des 2 textfield
         -> choix bus
         -> choix voiture
         -> les trois en meme temps
-
-{
-    type:"button',
-    text:"button"
-}

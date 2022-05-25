@@ -32,10 +32,13 @@ module.exports = (data, props) => {
                     style: {
                         hovercolor: 0xFFAAAAFD,
                         activeColor: 0xFFFFFFFF,
-                        focusColor:0xFF55FF22
+                        focusColor: 0xFF55FF22
                     },
                     onPressed: {
-                        action: "radioClick"
+                        action: "radioClick",
+                        props: {
+                            clicked: props.iconData
+                        }
                     }
                 }
             ]
