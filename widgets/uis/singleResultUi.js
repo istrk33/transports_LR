@@ -26,57 +26,6 @@ module.exports = (data, props) => {
             direction: "vertical",
             fillParent: true,
             children: [
-                {
-                    type: "text",
-                    value: "Trouvez un trajet sur La Rochelle",
-                    style: {
-                        color: 0xFF000000
-                    }
-                },
-                {
-                    type: "widget",
-                    name: "textfield",
-                    props: {
-                        labelValue: "Départ",
-                        iconData: "location_pin",
-                    }
-                },
-                {
-                    type: "widget",
-                    name: "textfield",
-                    props: {
-                        labelValue: "Destination",
-                        iconData: "gps_fixed",
-                    }
-                },
-                {
-                    type: "widget",
-                    name: "radioButton",
-                    props: {
-                        iconData: "car_rental"
-                    }
-                },
-                {
-                    type: "widget",
-                    name: "radioButton",
-                    props: {
-                        iconData: "pedal_bike"
-                    }
-                },
-                {
-                    type: "widget",
-                    name: "radioButton",
-                    props: {
-                        iconData: "bus_alert"
-                    }
-                }
-                , {
-                    type: "button",
-                    text: "Chercher",
-                    onPressed: {
-                        action: "searchClick",
-                    }
-                },
             ]
         }
     }

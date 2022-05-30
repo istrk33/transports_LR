@@ -11,6 +11,13 @@ function getCurrentPage(navigation) {
       return {
         type: "widget",
         name: "firstUi",
+        query: {
+          "$find": {
+            "_datastore": {
+              "$eq": "appData"
+            }
+          }
+        }
       };
     case "resultsView":
       return {

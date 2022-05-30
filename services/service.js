@@ -6,8 +6,8 @@ module.exports = {
     get(api, dataId) {
         return axios.get(`${api.url}/app/datastores/appData/data/${dataId}`, options(api));
     },
-    put(api, data) {
-        return axios.put(`${api.url}/app/datastores/appData/data/${data._id}`, counter, options(api));
+    put(api, id, data) {
+        return axios.put(`${api.url}/app/datastores/appData/data/${id}`, data, options(api));
     },
     new(api, data) {
         return axios.post(`${api.url}/app/datastores/appData/data`, { "typeOfTransports": data }, options(api));

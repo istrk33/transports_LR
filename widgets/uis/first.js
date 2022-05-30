@@ -8,6 +8,10 @@
  */
 // const functions = require("../../resources/functions");
 module.exports = (data, props) => {
+    var datas = data[0].typeOfTransports;
+    console.log("FIRSTTTTTTTTTT UI");
+    console.log(data);
+    console.log(datas);
     return {
         type: "container",
         decoration: {
@@ -53,21 +57,45 @@ module.exports = (data, props) => {
                     type: "widget",
                     name: "radioButton",
                     props: {
-                        iconData: "car_rental"
+                        iconData: datas.radioButton1,
+                        number: 1
+                    },
+                    query: {
+                        "$find": {
+                            "_datastore": {
+                                "$eq": "appData"
+                            }
+                        }
                     }
                 },
                 {
                     type: "widget",
                     name: "radioButton",
                     props: {
-                        iconData: "pedal_bike"
+                        iconData: datas.radioButton2,
+                        number: 2
+                    },
+                    query: {
+                        "$find": {
+                            "_datastore": {
+                                "$eq": "appData"
+                            }
+                        }
                     }
                 },
                 {
                     type: "widget",
                     name: "radioButton",
                     props: {
-                        iconData: "bus_alert"
+                        iconData: datas.radioButton3,
+                        number: 3
+                    },
+                    query: {
+                        "$find": {
+                            "_datastore": {
+                                "$eq": "appData"
+                            }
+                        }
                     }
                 }
                 , {

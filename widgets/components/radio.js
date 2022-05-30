@@ -21,14 +21,14 @@ module.exports = (data, props) => {
             children: [
                 {
                     type: "icon",
-                    value: props.iconData,
+                    value: props.iconData[0],
                     color: black,
                     size: 25
                 },
                 {
                     type: "radio",
                     groupValue: "travelType",
-                    value: props.iconData,
+                    value: props.iconData[1],
                     style: {
                         hovercolor: 0xFFAAAAFD,
                         activeColor: 0xFFFFFFFF,
@@ -37,7 +37,7 @@ module.exports = (data, props) => {
                     onPressed: {
                         action: "radioClick",
                         props: {
-                            clicked: props.iconData
+                            clicked: props.number
                         }
                     }
                 }
